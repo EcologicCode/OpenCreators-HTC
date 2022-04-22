@@ -13,5 +13,8 @@
 		<a href="../../index.php">< Finir</a>
 	</p>
 </header>
+<center>
+	<input type="text" id="Name" width="100%">
+</center>
 </body>
 </html>
