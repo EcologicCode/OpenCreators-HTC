@@ -14,7 +14,7 @@ if (isset($_GET['url'])) :?>
 Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.getElementById('Pass').value);">Soumettre</button>
 <?php 
 
-elseif (!isset($_GET['url']) && isset($_SESSION['Accept'])) :?>
+elseif (!isset($_GET['url']) && !isset($_SESSION['Accept'])) :?>
 	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text;</script>
 Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.getElementById('Pass').value);">Soumettre</button>
 <?php 
@@ -25,7 +25,7 @@ elseif($_SESSION['Accept'] == true && isset($_GET['url'])):
 	header("Location : $url");
 	exit();
 elseif ($_SESSION['Accept'] == true && !isset($_GET['url'])) :
-	header("Location : index.php");
+	header("Location : indexHTC.php");
 	exit();
 
 endif;
