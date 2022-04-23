@@ -10,12 +10,12 @@
 session_start();
 
 if (isset($_GET['url'])) :?>
-	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text+"&url=<?php echo $_GET['url'];?>";</script>
+	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text+"&url=<?php echo $_GET['url'];?>";}</script>
 Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.getElementById('Pass').value);">Soumettre</button>
 <?php 
 
 elseif (!isset($_GET['url']) && !isset($_SESSION['Accept'])) :?>
-	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text;</script>
+	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text;}</script>
 
 Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.getElementById('Pass').value);">Soumettre</button>
 <?php 
