@@ -22,7 +22,8 @@ Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.
 elseif($_SESSION['Accept'] == true && isset($_GET['url'])):
 	$url = $_GET['url'];
 
-	header("Location : $url");
+	header('Status: 301 Moved Permanently', false, 301);
+	header("Location: $url");
 	exit();
 elseif ($_SESSION['Accept'] == true && !isset($_GET['url'])) :
 	header("Location : indexHTC.php");
