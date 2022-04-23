@@ -26,7 +26,8 @@ elseif($_SESSION['Accept'] == true && isset($_GET['url'])):
 	header("Location: $url");
 	exit();
 elseif ($_SESSION['Accept'] == true && !isset($_GET['url'])) :
-	header("Location : indexHTC.php");
+	header('Status: 301 Moved Permanently', false, 301);
+	header("Location: indexHTC.php");
 	exit();
 
 endif;
