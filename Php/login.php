@@ -16,20 +16,16 @@ Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.
 
 elseif (!isset($_GET['url']) && !isset($_SESSION['Accept'])) :?>
 	<script type="text/javascript">MdpOk(Text){location.href="login.php?mdp="+Text;</script>
+
 Mot de passe : <input type="password" id="Pass"><button onclick="MdpOk(document.getElementById('Pass').value);">Soumettre</button>
 <?php 
 
-elseif($_SESSION['Accept'] == true && isset($_GET['url'])):
+elseif($_SESSION['Accept'] == true && isset($_GET['url'])):?>
 	$url = $_GET['url'];
-
-	header('Status: 301 Moved Permanently', false, 301);
-	header("Location: $url");
-	exit();
-elseif ($_SESSION['Accept'] == true && !isset($_GET['url'])) :
-	header('Status: 301 Moved Permanently', false, 301);
-	header("Location: indexHTC.php");
-	exit();
-
+<script type="text/javascript">location.href="<?php echo $_GET['url'];?>"</script><?php
+	
+elseif ($_SESSION['Accept'] == true && !isset($_GET['url'])) :?>
+	<script type="text/javascript">location.href="indexHTC.php";</script><?php
 endif;
 ?>
 </body>
