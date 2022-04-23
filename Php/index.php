@@ -13,8 +13,8 @@ if($_SESSION['Accept'] == true): ?>
 <body>
 <header style="background-color: greenyellow;">
 	<p>
-		<a href="../index.php?Sess=true">&lt; Retour</a><br>
-		<a href="../../index.php">&lt; Finir</a>
+		<a href="index.php?Sess=true">&lt; Retour</a><br>
+		<a href="../index.php">&lt; Finir</a>
 	</p>
 </header>
 <center>
