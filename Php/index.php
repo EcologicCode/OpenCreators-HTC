@@ -11,7 +11,7 @@ if($_SESSION['Accept'] == true): ?>
 	<title>Hyper Text Preprocessor Plug-in in Php for HTC - Accueil</title>
 </head>
 <body>
-<header style="background-color: greenyellow;">
+<header style="background-color: green;">
 	<p>
 		<a href="index.php?Sess=true">&lt; Retour</a><br>
 		<a href="../index.php">&lt; Finir</a>
@@ -24,7 +24,7 @@ if($_SESSION['Accept'] == true): ?>
 		Bienvenue sur Hyper Text Preprocessor Plug-in in Php for HTC !<br>
 		Autrement : HTPPIP<br>
 		Ce système a été consus pour faciliter la création de sites Webs<br>
-		<?php if(isset($_SESSION['1Load'])){echo "<a href='edit.php?f=index'>Démmarer maintenant</a><br>"; }?>
+		<?php if(isset($_SESSION['1Load'])){echo "<a href='edit.php?f=index.php'>Démmarer maintenant</a><br>"; }?>
 	</p>
 </center>
 </font>
